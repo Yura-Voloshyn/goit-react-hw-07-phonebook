@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import { Label } from './Filter.styled';
+
 const Filter = ({ value, onChange }) => (
   <Label>
     Find contacts by name
@@ -11,12 +12,3 @@ Filter.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 export default Filter;
-
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-`;

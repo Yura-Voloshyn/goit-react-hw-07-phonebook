@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import { ListItem } from './ContactItem.styled';
 const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
     <ListItem key={id}>
@@ -20,16 +20,3 @@ ContactItem.propTypes = {
   ),
 };
 export default ContactItem;
-const ListItem = styled.li`
-  /* width: 300px; */
-  display: flex;
-  margin: 8px 0;
-  gap: 10px;
-  & p {
-    margin: 0;
-  }
-  & button {
-    margin-left: auto;
-    padding: 2px 4px;
-  }
-`;

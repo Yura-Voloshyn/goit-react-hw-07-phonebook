@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import { List, Title } from './ContactList.styled';
 import Filter from 'components/Filter';
-import ContactItem from './ContactItem';
+import ContactItem from '../ContactItem/ContactItem';
 
 const ContactListSection = ({ contacts, onDeleteContact, value, onChange }) => (
   <section>
@@ -15,11 +15,6 @@ const ContactListSection = ({ contacts, onDeleteContact, value, onChange }) => (
           number={number}
           onDeleteContact={() => onDeleteContact(id)}
         />
-        // <ListItem key={id}>
-        //   <p>{name}:</p>
-        //   <p>{number}</p>
-        //   <button onClick={() => onDeleteContact(id)}>Delete</button>
-        // </ListItem>
       ))}
     </List>
   </section>
@@ -34,25 +29,3 @@ ContactListSection.propTypes = {
   ),
 };
 export default ContactListSection;
-const List = styled.ul`
-  padding: 0;
-  margin: 0;
-`;
-// const ListItem = styled.li`
-//   /* width: 300px; */
-//   display: flex;
-//   margin: 8px 0;
-//   gap: 10px;
-//   & p {
-//     margin: 0;
-//   }
-//   & button {
-//     margin-left: auto;
-//     padding: 2px 4px;
-//   }
-// `;
-const Title = styled.h2`
-  text-align: center;
-  margin: 0;
-  margin-bottom: 10px;
-`;
