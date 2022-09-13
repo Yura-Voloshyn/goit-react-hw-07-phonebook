@@ -8,11 +8,11 @@ const ContactListSection = ({ contacts, onDeleteContact, value, onChange }) => (
     <Title>Contacts</Title>
     <Filter value={value} onChange={onChange} />
     <List>
-      {contacts.map(({ id, name, number }) => (
+      {contacts.map(({ id, name, phone }) => (
         <ContactItem
           key={id}
           name={name}
-          number={number}
+          phone={phone}
           onDeleteContact={() => onDeleteContact(id)}
         />
       ))}
@@ -24,7 +24,8 @@ ContactListSection.propTypes = {
     PropTypes.exact({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      createdAt: PropTypes.string,
     })
   ),
 };
